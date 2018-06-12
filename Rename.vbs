@@ -18,7 +18,7 @@ for each f1 in f.files
 	M_file = f1.name
 	'MsgBox(fso.GetExtensionName(f1.Name))
 	
-	If inStr(fso.GetExtensionName(f1.Name), "JPG") > 0 or inStr(fso.GetExtensionName(f1.Name), "JPEG") > 0  Then
+	If inStr(fso.GetExtensionName(f1.Name), "JPG") > 0 or inStr(fso.GetExtensionName(f1.Name), "JPEG") > 0 or inStr(fso.GetExtensionName(f1.Name), "jpg") > 0 or inStr(fso.GetExtensionName(f1.Name), "jpeg") > 0 Then
 		
 		if inStr(Oldfile, "-") > 0 then
 			'answer=MsgBox(Len(Oldfile) - instr(f1.name,"-"),65,"index")
