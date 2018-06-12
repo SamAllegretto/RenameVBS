@@ -32,10 +32,11 @@ for each f1 in f.files
 			Newfile = Oldfile
 		else
 			Newfile = Hull & "-" & comp & "-" & Oldfile
+			fso.MoveFile M_file, Newfile 
 		end if
 		
 		'MsgBox(Newfile)
-		fso.MoveFile M_file, Newfile 
+		
 	end if
 	
 next
