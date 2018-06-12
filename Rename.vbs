@@ -23,9 +23,8 @@ for each f1 in f.files
 		if inStr(Oldfile, "-") > 0 then
 			'answer=MsgBox(Len(Oldfile) - instr(f1.name,"-"),65,"index")
 			Oldfile = Right(Oldfile,Len(Oldfile) - instr(f1.name,"-"))
-			'MsgBox(Oldfile)
-			Oldfile = Right(Oldfile,Len(Oldfile) - instr(f1.name,"-")-2)
-			'MsgBox(Oldfile)
+			Oldfile = Right(Oldfile,Len(Oldfile) - instr(Oldfile,"-"))
+			
 		end if
 		
 		if Hull = "" or comp = "" then
